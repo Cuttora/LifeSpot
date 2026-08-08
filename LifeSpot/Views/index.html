@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link href="/static/css/index.css" rel="stylesheet" type="text/css">
+    <script src="/static/scripts/script.js" ></script>
+
+    <script>
+        //checkAge();
+        handleSession();
+        sessionLog();
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+            80000);
+    </script>
 </head>
 <body>
     <header id="header-index">
@@ -11,14 +21,17 @@
             <h1>LifeSpot — прямые трансляции с улиц</h1>
             <p>Покажем, что происходит прямо сейчас</p>
         </div>
-        <input type="text" id="search-input" placeholder="Поиск видео..." />
+        <input type="text" oninput=" 
+        filterContent()" size="50%">
+
     </header>
 
     <aside id="sidebar">
 
         <div class="navbar">
             <a href="/"><p>Все трансляции</p></a>
-            <a href="/"><p>О проекте</p> </a>
+            <a href="/about"><p>О проекте</p></a>
+            <a href="/testing"><p>Тестирование</p></a>
         </div>
     </aside>
 
